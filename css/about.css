@@ -1,0 +1,173 @@
+/* ─────────────────────────────────────────────────────────
+   1) Reset & Base
+───────────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+  /* ─────────────────────────────────────────────────────────
+     2) Navbar (shared)
+  ───────────────────────────────────────────────────────── */
+#navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+#navbar a {
+    padding: .5rem;
+    transition: color .3s;
+}
+#navbar a:hover,
+#navbar a.active {
+    color: #0070f3;
+    font-weight: 600;
+}
+
+  /* ─────────────────────────────────────────────────────────
+     3) About Section
+  ───────────────────────────────────────────────────────── */
+#about {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Profile Photo */
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    transition: transform .3s;
+}
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Skills List */
+/* ─────────────────────────────────────────────────────────
+   Skills List Container
+───────────────────────────────────────────────────────── */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0; /* remove default ul padding */
+  }
+  
+  /* ─────────────────────────────────────────────────────────
+     Individual Skill Pills
+  ───────────────────────────────────────────────────────── */
+  .skills-list li {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  
+    /* size & typography */
+    padding: 0.7em 1.7em;
+    font-size: 1rem;
+    color: #090909;
+    cursor: default;
+  
+    /* Neumorphic look */
+    border-radius: 0.5em;
+    background: #a35c77;
+    border: 1px solid #e8e8e8;
+    box-shadow:  6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Pseudo‐elements for the ripple */
+  .skills-list li::before,
+  .skills-list li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1);
+    border-radius: 50%;
+    display: block;
+    pointer-events: none;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  
+  .skills-list li::before {
+    /* subtle shadow under pill */
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .skills-list li::after {
+    /* color bloom */
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+  }
+  
+  /* Hover effects */
+  .skills-list li:hover {
+    color: #fff;
+    border-color: #009087;
+  }
+  .skills-list li:hover::before {
+    top: -45%;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  .skills-list li:hover::after {
+    top: -35%;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  /* Active (click) state */
+  .skills-list li:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+  }
+  /* Ensure skill “blobs” sit behind the text */
+.skills-list li {
+    position: relative; /* already set */
+    z-index: 1;         /* make sure text sits above */
+  }
+  
+  .skills-list li::before,
+  .skills-list li::after {
+    z-index: -1;        /* push the circles behind the li content */
+  }
+  

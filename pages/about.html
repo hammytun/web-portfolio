@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me – My Portfolio</title>
+  <link rel="stylesheet" href="../css/about.css" />
+  <!-- AOS for scroll-triggered animations -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about" data-aos="fade-right">
+      <h2>About Me</h2>
+      <img
+        src="../headshot.jpg"
+        alt="My Photo"
+        class="profile-pic"
+      />
+      <p>
+        Hello! I’m <strong>Harrison Tun</strong>, a rising junior at Tufts University, studying Computer Science and Economics. I am an aspiring Full Stack Developer with a passion for creating interactive web applications and engaging user experiences. I have experience in both front-end and back-end development, and I love working with modern web technologies to build efficient and scalable applications.
+      </p>
+      <ul class="skills-list">
+        <li data-aos="zoom-in" data-aos-delay="300">C/C++</li>
+        <li data-aos="zoom-in" data-aos-delay="300">Python</li>
+        <li data-aos="zoom-in">JavaScript</li>
+        <li data-aos="zoom-in" data-aos-delay="100">HTML &amp; CSS</li>
+        <li data-aos="zoom-in" data-aos-delay="200">React</li>
+        <li data-aos="zoom-in" data-aos-delay="400">Git &amp; GitHub</li>
+        <!-- Add more skills as needed -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  ></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

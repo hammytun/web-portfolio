@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – My Portfolio</title>
+
+  <!-- Font Awesome for icons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/contact.css" />
+  <!-- AOS for scroll-triggered animations -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <main>
+    <section class="contact-section" data-aos="fade-up">
+      <h2>Get In Touch</h2>
+      <div class="icon-row">
+        <a href="https://github.com/hammyTun" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/you" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:harrison.tun@tufts.edu" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://discord.gg/users/721537209441714218" target="_blank" aria-label="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+  
+      <!-- Optional form -->
+      <form action="https://formspree.io/f/yourformid" method="POST" data-aos="fade-up">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Message…"></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  ></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

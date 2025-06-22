@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume – My Portfolio</title>
+
+  <!-- Page Styles -->
+  <link rel="stylesheet" href="../css/resume.css" />
+
+  <!-- AOS for scroll-triggered animations -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section id="resume" data-aos="fade-up">
+      <div class="resume-container">
+        <iframe
+          src="assets/resume.pdf"
+          width="100%"
+          height="800"
+          frameborder="0"
+          title="Resume PDF"
+        ></iframe>
+        <a class="btn" href="assets/resume.pdf" download>
+          Download PDF
+        </a>
+      </div>
+    </section>
+  </main>
+  <!-- AOS Script -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  ></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true
+    });
+  </script>
+
+  <!-- Your Main JS (e.g. nav highlight) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

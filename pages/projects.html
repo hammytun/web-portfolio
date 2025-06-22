@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects – My Portfolio</title>
+  <!-- Global + page-specific styles -->
+  <link rel="stylesheet" href="../css/projects.css" />
+  <!-- AOS for scroll-triggered animations -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section id="projects" data-aos="fade-up">
+      <h2>My Projects</h2>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="c/c++">C/C++</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" data-filter="html-css">HTML &amp; CSS</button>
+        <button class="filter-btn" data-filter="react">React</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="project-grid">
+        <div
+          class="project-card"
+          data-category="c/c++"
+          data-aos="flip-left"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png"
+            alt="Screenshot of Project One"
+          />
+          <h3>C/C++ Projects</h3>
+          <p>A short description of what this project does and why it’s cool.</p>
+          <a
+            href="https://github.com/hammytun?tab=repositories"
+            class="btn"
+            target="_blank"
+            >View Code</a
+          >
+        </div>
+        <div
+          class="project-card"
+          data-category="html-css react javascript"
+          data-aos="flip-left"
+          data-aos-delay="100"
+        >
+          <img
+            src="assets/img/proj2.png"
+            alt="Screenshot of Project Two"
+          />
+          <h3>SmartBrain</h3>
+          <p>A fully developed web application that uses a facial recognition API</p>
+          <a
+            href="https://github.com/yourusername/project-two"
+            class="btn"
+            target="_blank"
+            >View Code</a
+          >
+        </div>
+            <div
+              class="project-card"
+              data-category="python"
+              data-aos="flip-left"
+            >
+              <img
+                src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxsG72wAo9EWJR4yQWyJJaDaK1XdUso6cUMpI9hAdPUU_FNs11cY1X284vsHrnWtRw7oqRpN1m9YAg21d_aNKnIo-&format=source"
+                alt="Screenshot of Project One"
+              />
+              <h3>CSV Parser to Discord</h3>
+              <p>A program that parses a CSV and creates an invite link to a Discord server, assigning specific roles based on the CSV's info.</p>
+              <a
+                href="https://github.com/hammytun/CSV-to-Discord"
+                class="btn"
+                target="_blank"
+                >View Code</a
+              >
+        <!-- Add more .project-card blocks as needed -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Overlay (hidden by default; you'll toggle .active via JS) -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <!-- Populate dynamically: large image, extended description, links, etc. -->
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  ></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true
+    });
+  </script>
+  <script>
+   const buttons = document.querySelectorAll('.filter-btn');
+const cards   = document.querySelectorAll('.project-card');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;  // e.g. "html-css" or "react"
+
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    cards.forEach(card => {
+      // split into an array: ["html-css","react","javascript"]
+      const cats = card.dataset.category.split(' ');
+      // show if matching or if "all"
+      if (filter === 'all' || cats.includes(filter)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+  </script>  
+  <script src="js/main.js"></script>
+</body>
+</html>

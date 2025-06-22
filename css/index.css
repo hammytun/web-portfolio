@@ -1,0 +1,88 @@
+/* ─── Base & Reset ───────────────────────────────────────── */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:system-ui,sans-serif;
+  background:#f9f9f9;
+  color:#333;
+  line-height:2;
+}
+h1 {
+  font-size:2.5rem; 
+}
+
+/* ─── Navbar ───────────────────────────────────────────────── */
+#navbar {
+  position:sticky; top:0;
+  display:flex; justify-content:center; gap:1rem;
+  padding:1rem;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(6px);
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  z-index:10;
+}
+#navbar a {
+  padding:.5rem; text-decoration:none; color:#333;
+  transition:color .3s;
+}
+#navbar a.active,#navbar a:hover{ color:#0070f3; font-weight:600; }
+
+/* ─── Hero Section ────────────────────────────────────────── */
+#hero {
+  height:100vh;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:0 1rem;
+  position:relative;
+  overflow:hidden;
+  /* Vanta will inject its own canvas here */
+  background:#f9f9f9; /* fallback */
+}
+.hero-content { 
+  position:relative; 
+  z-index:2; 
+}
+.highlight { 
+  color:#0070f3; 
+}
+
+/* typewriter, cursor, description, btn… (unchanged) */
+
+.subtitle{ 
+  font-family:'Courier New',monospace; 
+  font-size:1.75rem; 
+  margin-top:1rem; 
+  min-height:2.2em; 
+}
+.typewriter { 
+  white-space:nowrap; 
+  overflow:hidden; 
+}
+.cursor { 
+  display:inline-block; 
+  width:2px; background:currentColor; 
+  margin-left:2px; 
+  animation:blink .7s steps(1) infinite; 
+}
+@keyframes blink {50%{opacity:0;}}
+
+.description { 
+  margin-bottom:2rem; 
+  color:#555; 
+}
+.btn {
+  display:inline-block; padding:.6rem 1.2rem;
+  background:#0070f3; color:#fff; border-radius:.25rem;
+  text-decoration:none; transition:transform .2s;
+}
+.btn:hover
+{ 
+  transform:translateY(-2px); 
+}
+
+/* ─── Footer ────────────────────────────────────────────────── */
+footer{ 
+  text-align:center; 
+  padding:2rem 0; 
+  font-size:.9rem; 
+  color:#666; 
+}

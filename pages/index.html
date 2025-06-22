@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harrison Tun – Portfolio</title>
+
+  <!-- AOS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
+  <!-- your styles -->
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+  <nav id="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Hi, I’m <span class="highlight">Harrison Tun</span>.</h1>
+        <h2 class="subtitle">
+          I’m a <span class="typewriter"></span><span class="cursor">|</span>
+        </h2>
+        <p class="description">
+          Full Stack Developer based in Boston—currently studying at Tufts University.
+        </p>
+        <a class="btn" href="css/projects.html">View My Work</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Harrison Tun
+  </footer>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  ></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+
+    // typewriter code stays the same...
+    const roles = ['Full Stack Developer','Software Engineer','UI/UX Enthusiast'];
+    let roleIdx=0,charIdx=0;
+    function type(){
+      const el=document.querySelector('.typewriter'),
+            text=roles[roleIdx];
+      if(charIdx<=text.length){
+        el.textContent=text.slice(0,charIdx++);
+        setTimeout(type,100);
+      } else {
+        setTimeout(()=>{
+          charIdx=0;
+          roleIdx=(roleIdx+1)%roles.length;
+          type();
+        },2000);
+      }
+    }
+    document.addEventListener('DOMContentLoaded',type);
+
+    // init Vanta.NET on #hero
+    VANTA.NET({
+      el: "#hero",
+      backgroundColor: 0xf9f9f9,
+      color: 0x0070f3,
+      points: 12.0,
+      maxDistance: 20.0,
+      spacing: 15.0,
+      showDots: false,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false
+    });
+  </script>
+</body>
+</html>
