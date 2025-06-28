@@ -171,4 +171,6 @@ a {
   .skills-list li::after {
     z-index: -1;        /* push the circles behind the li content */
   }
-  
+p {
+  font-size: larger;
+}
