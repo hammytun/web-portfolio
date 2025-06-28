@@ -105,7 +105,7 @@ a {
     /* Neumorphic look */
     border-radius: 0.5em;
     background: #0070f3;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #0070f3;
     box-shadow:  6px 6px 12px #c5c5c5,
                 -6px -6px 12px #ffffff;
     transition: all 0.3s ease-in-out;
