@@ -143,6 +143,7 @@ a {
   /* Hover effects */
   .skills-list li:hover {
     color: black;
+    font-weight: bold;
     border-color: #f9f9f9;
   }
   .skills-list li:hover::before {
