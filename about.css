@@ -104,7 +104,7 @@ a {
   
     /* Neumorphic look */
     border-radius: 0.5em;
-    background: #a35c77;
+    background: #f9f9f9;
     border: 1px solid #e8e8e8;
     box-shadow:  6px 6px 12px #c5c5c5,
                 -6px -6px 12px #ffffff;
@@ -137,13 +137,13 @@ a {
     top: 180%;
     width: 160%;
     height: 190%;
-    background-color: #009087;
+    background-color: #0070f3;
   }
   
   /* Hover effects */
   .skills-list li:hover {
     color: #fff;
-    border-color: #009087;
+    border-color: #0070f3;
   }
   .skills-list li:hover::before {
     top: -45%;
