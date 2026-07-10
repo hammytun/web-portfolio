@@ -132,3 +132,21 @@ footer {
     text-align:center; padding:2rem 0;
     font-size: .9rem; color: #666;
 }
+
+/* ─── Hero Section ────────────────────────────────────────── */
+#hero {
+    height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:0 1rem;
+    position:relative;
+    /* Vanta will inject its own canvas here */
+    background:#f9f9f9; /* fallback */
+  }
+  .hero-content { 
+    position:relative; 
+    z-index:2; 
+  }
+  .highlight { 
+    color:#0070f3; 
+  }
+  
