@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">Discord project icon</title>
+  <rect x="13" y="13" width="134" height="134" rx="28" fill="#5865F2"/>
+  <path d="M111 52c-8-4-17-7-26-8l-4 8a77 77 0 0 0-22 0l-4-8c-9 1-18 4-26 8-16 24-20 48-18 72 11 8 22 13 33 16l8-11c-5-2-10-5-14-8l4-3c25 12 52 12 76 0l4 3c-4 3-9 6-14 8l8 11c11-3 22-8 33-16 3-28-5-52-18-72Zm-55 57c-8 0-14-8-14-17s6-17 14-17 14 8 14 17-6 17-14 17Zm48 0c-8 0-14-8-14-17s6-17 14-17 14 8 14 17-6 17-14 17Z" fill="#fff"/>
+</svg>

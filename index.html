@@ -1,87 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harrison Tun – Portfolio</title>
-
-  <!-- AOS -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    rel="stylesheet"
-  />
-  <!-- your styles -->
-  <link rel="stylesheet" href="index.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Harrison Tun's interactive dinner-table portfolio. Explore his work, experience, skills, and résumé by choosing a plate.">
+  <meta name="theme-color" content="#3a1712">
+  <title>Harrison Tun | The Portfolio Table</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <nav id="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <a class="skip-link" href="#table-menu">Skip to portfolio menu</a>
 
-  <main>
-    <section id="hero">
-      <div class="hero-content" data-aos="fade-up">
-        <h1>Hi, I’m <span class="highlight">Harrison Tun</span>.</h1>
-        <h2 class="subtitle">
-          I’m a <span class="typewriter"></span><span class="cursor">|</span>
-        </h2>
-        <p class="description">
-          Software Engineer based in Boston—currently studying at Tufts University.
-        </p>
-        <a class="btn" href="projects.html">View My Work</a>
+  <main class="restaurant" id="home">
+    <div class="ambient-light" aria-hidden="true"></div>
+    <div class="table-grain" aria-hidden="true"></div>
+
+    <header class="restaurant-header">
+      <a class="monogram" href="#home" aria-label="Return to the table">HT</a>
+      <div class="restaurant-title">
+        <span>Harrison Tun presents</span>
+        <strong>The Portfolio Table</strong>
       </div>
+      <button class="soundless-note" type="button" aria-label="Instructions">
+        <span aria-hidden="true">✦</span>
+        Choose a plate
+      </button>
+    </header>
+
+    <section class="table" id="table-menu" aria-labelledby="welcome-title">
+      <div class="placemat" aria-hidden="true"></div>
+
+      <div class="place-card">
+        <p class="place-card-kicker">Tonight's host</p>
+        <h1 id="welcome-title">Harrison Tun</h1>
+        <p>Software engineer serving full-stack products, automation, and developer tools.</p>
+        <div class="place-card-meta">
+          <span>Tufts ’27</span>
+          <i></i>
+          <span>MITRE</span>
+          <i></i>
+          <span>Boston</span>
+        </div>
+        <span class="place-card-instruction">Select a course to explore</span>
+      </div>
+
+      <div class="fork fork-left" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+      <div class="knife knife-right" aria-hidden="true"><b></b></div>
+      <div class="napkin" aria-hidden="true"><span>HT</span></div>
+      <div class="glass glass-top" aria-hidden="true"><i></i></div>
+      <div class="salt" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="pepper" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <button class="plate plate-about" type="button" data-course="about" aria-label="Open About Harrison">
+        <span class="plate-face">
+          <span class="plate-rim"></span>
+          <span class="food brunch-art" aria-hidden="true">
+            <span class="toast"></span>
+            <span class="egg"><i></i></span>
+            <span class="avocado a1"></span><span class="avocado a2"></span><span class="avocado a3"></span>
+            <span class="berry b1"></span><span class="berry b2"></span><span class="berry b3"></span>
+          </span>
+        </span>
+        <span class="plate-tag"><small>First course</small><strong>About</strong></span>
+      </button>
+
+      <button class="plate plate-projects" type="button" data-course="projects" aria-label="Open Harrison's Projects">
+        <span class="plate-face">
+          <span class="plate-rim"></span>
+          <span class="food ramen-art" aria-hidden="true">
+            <span class="bowl"></span>
+            <span class="broth"></span>
+            <span class="noodle n1"></span><span class="noodle n2"></span><span class="noodle n3"></span><span class="noodle n4"></span>
+            <span class="ramen-egg"><i></i></span>
+            <span class="scallion s1"></span><span class="scallion s2"></span><span class="scallion s3"></span>
+            <span class="chopstick c1"></span><span class="chopstick c2"></span>
+          </span>
+        </span>
+        <span class="plate-tag"><small>Second course</small><strong>Projects</strong></span>
+      </button>
+
+      <button class="plate plate-experience" type="button" data-course="experience" aria-label="Open Harrison's Experience">
+        <span class="plate-face">
+          <span class="plate-rim"></span>
+          <span class="food steak-art" aria-hidden="true">
+            <span class="steak"><i></i><i></i><i></i></span>
+            <span class="potato p1"></span><span class="potato p2"></span><span class="potato p3"></span>
+            <span class="pea e1"></span><span class="pea e2"></span><span class="pea e3"></span><span class="pea e4"></span><span class="pea e5"></span>
+            <span class="sauce"></span>
+          </span>
+        </span>
+        <span class="plate-tag"><small>Main course</small><strong>Experience</strong></span>
+      </button>
+
+      <button class="plate plate-resume" type="button" data-course="resume" aria-label="Open Harrison's Résumé">
+        <span class="plate-face">
+          <span class="plate-rim"></span>
+          <span class="food dessert-art" aria-hidden="true">
+            <span class="pancake pc1"></span><span class="pancake pc2"></span><span class="pancake pc3"></span>
+            <span class="syrup"></span>
+            <span class="butter"></span>
+            <span class="chocolate-plaque">CV</span>
+            <span class="berry rb1"></span><span class="berry rb2"></span>
+          </span>
+        </span>
+        <span class="plate-tag"><small>Final course</small><strong>Résumé</strong></span>
+      </button>
+
+      <button class="waiter-button" type="button" data-contact aria-label="Call the chef for contact information">
+        <span class="waiter-label">Call the chef</span>
+        <span class="waiter" aria-hidden="true">
+          <span class="waiter-head"><i class="hair"></i><i class="ear left"></i><i class="ear right"></i><i class="face-eye left"></i><i class="face-eye right"></i><i class="smile"></i></span>
+          <span class="waiter-neck"></span>
+          <span class="waiter-body"><i class="shirt"></i><i class="lapel left"></i><i class="lapel right"></i><i class="bow left"></i><i class="bow right"></i><i class="button one"></i><i class="button two"></i></span>
+          <span class="waiter-arm"></span>
+          <span class="tray"><i class="cloche"></i><i class="cloche-handle"></i></span>
+        </span>
+      </button>
     </section>
+
+    <footer class="table-footer">
+      <span>Interactive portfolio · best enjoyed with curiosity</span>
+      <span>© <span data-year></span> Harrison Tun</span>
+    </footer>
   </main>
 
-  <footer>
-    &copy; 2025 Harrison Tun
-  </footer>
+  <div class="course-modal" id="course-modal" aria-hidden="true">
+    <div class="course-backdrop" data-close-course></div>
+    <section class="course-plate" role="dialog" aria-modal="true" aria-labelledby="about-heading">
+      <button class="course-close" type="button" data-close-course aria-label="Return to the table"><span>Back to table</span><i aria-hidden="true">×</i></button>
+      <div class="course-viewport">
+        <div class="course-scroll">
+        <article class="course-panel" data-panel="about" hidden>
+          <header class="course-heading">
+            <p>First course · About</p>
+            <h2 id="about-heading">A little about the chef.</h2>
+          </header>
+          <div class="about-grid">
+            <div class="portrait-frame">
+              <img src="headshot.jpg" alt="Harrison Tun smiling outdoors">
+              <span>Harrison Tun</span>
+            </div>
+            <div class="about-copy">
+              <p class="lead">I’m a Computer Science student at Tufts University and a full-stack developer at MITRE. I like building software that removes friction, handles real constraints, and stays understandable after the first version ships.</p>
+              <p>My work spans product interfaces, APIs, automation pipelines, command-line tools, and internal platforms. I am especially interested in full-stack engineering, developer tooling, and systems that make complicated workflows feel straightforward.</p>
+              <div class="quick-facts">
+                <div><strong>2027</strong><span>Expected Tufts graduation</span></div>
+                <div><strong>10,000+</strong><span>Users onboarded through automation</span></div>
+                <div><strong>60%</strong><span>Manual work reduced</span></div>
+              </div>
+            </div>
+          </div>
+          <section class="skills-section" aria-labelledby="skills-heading">
+            <div class="section-line"><span></span><h3 id="skills-heading">Ingredients I work with</h3><span></span></div>
+            <div class="skill-groups">
+              <div><h4>Languages</h4><p>C/C++, Java, Python, JavaScript, HTML, CSS, x86 Assembly</p></div>
+              <div><h4>Frameworks</h4><p>Vue 3, React, Node.js, Tailwind CSS, Prisma</p></div>
+              <div><h4>Data & cloud</h4><p>PostgreSQL, MongoDB, Microsoft Azure, REST APIs</p></div>
+              <div><h4>Workflow</h4><p>Git, GitHub, worktrees, parallel coding agents, implementation planning, code review</p></div>
+            </div>
+          </section>
+        </article>
 
-  <!-- scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-  ></script>
-  <script>
-    AOS.init({ duration: 700, once: true });
+        <article class="course-panel projects-panel" data-panel="projects" hidden>
+          <header class="course-heading projects-heading">
+            <p>Second course · Projects</p>
+            <h2 id="projects-heading">Selected Projects</h2>
+            <span class="project-heading-flourish" aria-hidden="true">❧</span>
+            <p class="project-intro">A selection of personal projects focused on full-stack development, automation, and systems engineering.</p>
+          </header>
+          <div class="project-menu">
+            <article class="project-item">
+              <span class="project-mark mark-cpp" aria-hidden="true"><img src="assets/cpp-projects.svg" alt=""></span>
+              <div class="project-copy">
+                <p class="project-stack">C · C++ · Systems</p>
+                <h3>C/C++ Projects</h3>
+                <p>A collection of C and C++ builds focused on algorithms, systems programming, and low-level problem solving.</p>
+              </div>
+            </article>
+            <article class="project-item">
+              <span class="project-mark mark-brain" aria-hidden="true"><img src="assets/smartbrain.svg" alt=""></span>
+              <div class="project-copy">
+                <p class="project-stack">React.js · HTML · JavaScript · CSS</p>
+                <h3>SmartBrain</h3>
+                <p>A web application that uses the Hugging Face facial recognition API. Built with React.js, HTML, JavaScript, and CSS.</p>
+              </div>
+            </article>
+            <article class="project-item">
+              <span class="project-mark mark-discord" aria-hidden="true"><img src="assets/discord.svg" alt=""></span>
+              <div class="project-copy">
+                <p class="project-stack">Python · Discord API</p>
+                <h3>CSV Parser to Discord</h3>
+                <p>Parses a CSV, creates one-time Discord server invite links, and assigns specific roles from the information in each record.</p>
+              </div>
+            </article>
+            <article class="project-item">
+              <span class="project-mark mark-google" aria-hidden="true"><img src="assets/google-cloud-search.svg" alt=""></span>
+              <div class="project-copy">
+                <p class="project-stack">JavaScript · Google Cloud</p>
+                <h3>Google Search Engine Scraper</h3>
+                <p>Uses Google Cloud and JavaScript to retrieve the 10 most recent news articles for specific search queries.</p>
+              </div>
+            </article>
+          </div>
+          <a class="menu-link" href="https://github.com/hammyTun" target="_blank" rel="noopener">See more on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
 
-    // typewriter code stays the same...
-    const roles = ['Full Stack Developer','Student Software Engineer','UI/UX Enthusiast'];
-    let roleIdx=0,charIdx=0;
-    function type(){
-      const el=document.querySelector('.typewriter'),
-            text=roles[roleIdx];
-      if(charIdx<=text.length){
-        el.textContent=text.slice(0,charIdx++);
-        setTimeout(type,100);
-      } else {
-        setTimeout(()=>{
-          charIdx=0;
-          roleIdx=(roleIdx+1)%roles.length;
-          type();
-        },2000);
-      }
-    }
-    document.addEventListener('DOMContentLoaded',type);
+        <article class="course-panel" data-panel="experience" hidden>
+          <header class="course-heading">
+            <p>Main course · Experience</p>
+            <h2 id="experience-heading">Work that has shaped how I build.</h2>
+          </header>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-date">May 2026<br>Present</div>
+              <span class="timeline-icon" aria-hidden="true">⌘</span>
+              <div class="timeline-copy">
+                <div class="role-line"><h3>Full Stack Developer Intern</h3><span>MITRE · Bedford, MA</span></div>
+                <p>Build and maintain internal security applications that manage employee credentials and access to company systems. Develop features for FastJump, a company-wide command-based navigation tool for internal applications, office reservations, and campus services.</p>
+                <p class="timeline-note">Current focus: Vue 3, Node.js, testing, Git worktrees, and parallel AI-assisted development.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">Apr 2025<br>Dec 2025</div>
+              <span class="timeline-icon" aria-hidden="true">&lt;/&gt;</span>
+              <div class="timeline-copy">
+                <div class="role-line"><h3>Software Engineering Intern</h3><span>NearStudios · Remote</span></div>
+                <p>Built the Kickstarter-to-Discord onboarding pipeline and a React platform with Unreal Engine 5 and Twitch integrations for interactive livestream experiences.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">Jan 2025<br>Present</div>
+              <span class="timeline-icon" aria-hidden="true">◎</span>
+              <div class="timeline-copy">
+                <div class="role-line"><h3>Tech Group Lead</h3><span>Engineers Without Borders · Tufts</span></div>
+                <p>Lead technical work for the WiSH project and built a MongoDB database that tracks water-tank levels in Makwelani, Malawi.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">May 2024<br>Aug 2024</div>
+              <span class="timeline-icon" aria-hidden="true">≈</span>
+              <div class="timeline-copy">
+                <div class="role-line"><h3>Assistant Head Coach</h3><span>Avenel Swim Club · Potomac, MD</span></div>
+                <p>Planned structured practices, coached swimmers across ability levels, and reinforced team accountability.</p>
+              </div>
+            </article>
+          </div>
+        </article>
 
-    // init Vanta.NET on #hero
-    VANTA.NET({
-      el: "#hero",
-      backgroundColor: 0xf9f9f9,
-      color: 0x0070f3,
-      points: 12.0,
-      maxDistance: 20.0,
-      spacing: 15.0,
-      showDots: false,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false
-    });
-  </script>
+        <article class="course-panel resume-panel" data-panel="resume" hidden>
+          <header class="course-heading">
+            <p>Final course · Résumé</p>
+            <h2 id="resume-heading">The full menu, on one page.</h2>
+          </header>
+          <div class="resume-actions">
+            <a class="paper-button primary" href="Harrison_Tun_Resume.pdf" download>Download PDF</a>
+            <a class="paper-button" href="Harrison_Tun_Resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+          </div>
+          <div class="resume-preview">
+            <object data="Harrison_Tun_Resume.pdf" type="application/pdf" aria-label="Harrison Tun résumé PDF">
+              <p>Your browser cannot display the PDF. <a href="Harrison_Tun_Resume.pdf">Download the résumé instead.</a></p>
+            </object>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="contact-overlay" id="contact-overlay" aria-hidden="true">
+    <div class="contact-backdrop" data-close-contact></div>
+    <button class="contact-close" type="button" data-close-contact aria-label="Close contact information">×</button>
+    <div class="contact-stage" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <div class="contact-waiter" aria-hidden="true">
+        <span class="waiter big">
+          <span class="waiter-head"><i class="hair"></i><i class="ear left"></i><i class="ear right"></i><i class="face-eye left"></i><i class="face-eye right"></i><i class="smile"></i></span>
+          <span class="waiter-neck"></span>
+          <span class="waiter-body"><i class="shirt"></i><i class="lapel left"></i><i class="lapel right"></i><i class="bow left"></i><i class="bow right"></i><i class="button one"></i><i class="button two"></i></span>
+          <span class="waiter-arm"></span>
+          <span class="tray contact-tray"><i class="cloche"></i><i class="cloche-handle"></i></span>
+        </span>
+      </div>
+      <section class="contact-card">
+        <p class="contact-kicker">Your chef has arrived</p>
+        <h2 id="contact-title">Let’s get something started.</h2>
+        <p>For engineering roles, project ideas, or a quick conversation, send a note here or reach me directly.</p>
+        <div class="contact-links">
+          <a href="mailto:harrison.tun@tufts.edu"><span>Email</span><strong>harrison.tun@tufts.edu</strong></a>
+          <a href="https://github.com/hammyTun" target="_blank" rel="noopener"><span>GitHub</span><strong>@hammyTun</strong></a>
+          <a href="https://www.linkedin.com/in/harrison-tun-716527299/" target="_blank" rel="noopener"><span>LinkedIn</span><strong>Harrison Tun</strong></a>
+        </div>
+        <form id="contact-form" action="https://formspree.io/f/xblyprjn" method="POST">
+          <div class="field-row">
+            <label><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+            <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          </div>
+          <label><span>Message</span><textarea name="message" rows="4" required></textarea></label>
+          <button type="submit"><span>Send to the kitchen</span><i aria-hidden="true">→</i></button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </div>
 </body>
 </html>

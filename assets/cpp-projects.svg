@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">C and C plus plus project icon</title>
+  <defs>
+    <linearGradient id="g" x1="28" y1="22" x2="130" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7fa7d7"/>
+      <stop offset="1" stop-color="#244d86"/>
+    </linearGradient>
+  </defs>
+  <path d="M80 10 140 45v70L80 150 20 115V45Z" fill="url(#g)"/>
+  <path d="M80 10 140 45 80 80 20 45Z" fill="#86acd9" opacity=".45"/>
+  <path d="M80 80 140 45v70L80 150Z" fill="#21477d" opacity=".9"/>
+  <path d="M88 48a38 38 0 1 0 0 64c8-5 14-11 18-19l-19-10a18 18 0 1 1 0-26l19-10c-4-8-10-14-18-19Z" fill="#fff"/>
+  <path d="M111 70h12v-12h8v12h12v8h-12v12h-8V78h-12Zm-25 0h10V60h7v10h10v7h-10v10h-7V77H86Z" fill="#fff"/>
+</svg>

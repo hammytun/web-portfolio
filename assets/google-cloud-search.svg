@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">Google Cloud search project icon</title>
+  <path d="M47 105c-18 0-32-14-32-31 0-15 10-27 24-30 6-17 22-29 41-29 21 0 38 14 43 33 13 2 22 13 22 27 0 16-13 30-30 30Z" fill="none" stroke="#4285F4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M39 45c7-18 24-30 44-30" fill="none" stroke="#EA4335" stroke-width="12" stroke-linecap="round"/>
+  <path d="M18 75c0-14 9-27 22-31" fill="none" stroke="#FBBC04" stroke-width="12" stroke-linecap="round"/>
+  <path d="M47 105c-14 0-26-9-30-21" fill="none" stroke="#34A853" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="100" cy="101" r="25" fill="#fffaf0" stroke="#244d86" stroke-width="8"/>
+  <path d="m119 120 21 21" stroke="#244d86" stroke-width="10" stroke-linecap="round"/>
+</svg>

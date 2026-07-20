@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">Facial recognition project icon</title>
+  <g fill="none" stroke="#5f8fc5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 55V35h20M105 35h20v20M35 105v20h20M125 105v20h-20"/>
+    <path d="M80 34c-23 0-39 18-39 43 0 29 16 49 39 49s39-20 39-49c0-25-16-43-39-43Z"/>
+    <path d="M61 72c5-5 12-7 19-7s14 2 19 7M58 86c8 3 15 5 22 5s14-2 22-5M66 105c8 5 20 5 28 0M80 44v74M49 63l62 36M111 63 49 99M53 80h54" opacity=".8"/>
+    <circle cx="65" cy="78" r="3" fill="#5f8fc5" stroke="none"/>
+    <circle cx="95" cy="78" r="3" fill="#5f8fc5" stroke="none"/>
+  </g>
+</svg>
