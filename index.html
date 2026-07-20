@@ -121,8 +121,29 @@
 
   <div class="course-modal" id="course-modal" aria-hidden="true">
     <div class="course-backdrop" data-close-course></div>
-    <section class="course-plate" role="dialog" aria-modal="true" aria-labelledby="about-heading">
-      <button class="course-close" type="button" data-close-course aria-label="Return to the table"><span>Back to table</span><i aria-hidden="true">×</i></button>
+  
+    <!-- Desktop button outside the plate -->
+    <button
+      class="course-close course-close-desktop"
+      type="button"
+      data-close-course
+      aria-label="Return to the table"
+    >
+      <span>Back to table</span>
+      <i aria-hidden="true">×</i>
+    </button>
+  
+    <section class="course-plate" role="dialog" aria-modal="true">
+      <!-- Existing phone and tablet button -->
+      <button
+        class="course-close course-close-mobile"
+        type="button"
+        data-close-course
+        aria-label="Return to the table"
+      >
+        <span>Back to table</span>
+        <i aria-hidden="true">×</i>
+      </button>
       <div class="course-viewport">
         <div class="course-scroll">
         <article class="course-panel" data-panel="about" hidden>
@@ -136,12 +157,12 @@
               <span>Harrison Tun</span>
             </div>
             <div class="about-copy">
-              <p class="lead">I’m a Computer Science student at Tufts University and a full-stack developer at MITRE. I like building software that removes friction, handles real constraints, and stays understandable after the first version ships.</p>
-              <p>My work spans product interfaces, APIs, automation pipelines, command-line tools, and internal platforms. I am especially interested in full-stack engineering, developer tooling, and systems that make complicated workflows feel straightforward.</p>
+              <p class="lead">I’m a Computer Science student at Tufts University working as a full-stack developer at MITRE this summer. I like building software has real world impact, but most importantly, projects that anyone can use.</p>
+              <p>My work spans product interfaces, APIs, automation pipelines, command-line tools, and internal platforms. I am especially interested in AI engineering, incorporating AI into workflows, and systems that make complicated workflows feel straightforward.</p>
               <div class="quick-facts">
                 <div><strong>2027</strong><span>Expected Tufts graduation</span></div>
-                <div><strong>10,000+</strong><span>Users onboarded through automation</span></div>
-                <div><strong>60%</strong><span>Manual work reduced</span></div>
+                <div><strong>4+</strong><span>Years of Experience Coding</span></div>
+                <div><strong>Maryland</strong><span>Hometown</span></div>
               </div>
             </div>
           </div>

@@ -250,6 +250,26 @@ body.course-active .table, body.contact-active .table { filter: blur(5px) bright
 .paper-button.primary { color:#fff8e8; background:var(--wine); border-color:var(--wine); }
 .resume-preview { height:420px; padding:8px; border:1px solid #d2ba8a; background:#e8d7b5; box-shadow:0 10px 22px rgba(67,38,20,.16); }
 .resume-preview object { width:100%; height:100%; background:#fff; }
+/* Keep the existing in-plate button on phones and tablets. */
+.course-close-desktop {
+  display: none;
+}
+
+/* Move the close button completely outside the plate on desktop. */
+@media (min-width: 1100px) {
+  .course-close-mobile {
+    display: none;
+  }
+
+  .course-close-desktop {
+    display: flex;
+    position: fixed;
+    top: 28px;
+    right: 32px;
+    left: auto;
+    z-index: 2100;
+  }
+}
 
 /* Contact chef sequence */
 .contact-overlay { position:fixed; inset:0; z-index:3000; visibility:hidden; opacity:0; transition:opacity .34s ease, visibility 0s linear .34s; }
